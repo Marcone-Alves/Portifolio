@@ -1,7 +1,6 @@
 *{margin: 0;
     box-sizing: border-box;
     padding: 0;
-
     transition: all 0.5s !important;
 }
 
@@ -35,6 +34,10 @@
     --FundoContato: rgba(180, 180, 120, 57%);
     --BotaoEnviar: #B4B478;
     --Border2Color: #C9C968;
+
+    #claro-escuro{
+        background-image: url(escuro.svg) !important;
+    }
 }
 
 html{
@@ -88,7 +91,7 @@ a{
     justify-self: center;
     position: fixed;
     background-color: var(--BackBody);
-    z-index: 99;
+    z-index: 98;
 }
 
 #header::after{
@@ -100,7 +103,7 @@ a{
     position: absolute;
     bottom: 0%;
     border-radius: 50px;
-    z-index: 99;
+    z-index: 98;
 }
 
 #info-perfil{
@@ -347,12 +350,12 @@ a{
 }
 
 #txt-mensagem{
-    width: 892px;
+    width: 1065px;
     height: 259px;
     background-color: var(--HeaderBack);
     border-radius: 20px;
     border: none;
-    margin: 7% 0% 0% 15%;
+    margin: 10% 0% 0% 4%;
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--TxtPadrao);
@@ -465,8 +468,25 @@ a{
     background-position: 50% 50%;
 }
 
-.fundoEscuro{
-    background-image: url(escuro.svg) !important;
+#modal-desc{
+    position: relative;
+}
+
+#modal-back{
+    width: 100%;
+    height: 300vh;
+    background-color: rgba(0, 0, 0, 50%);
+    position: absolute;
+    bottom: 0%;
+    z-index: 99;
+    display: none;
+}
+
+#modal{
+    width: 60%;
+    height: 50%;
+    background-color: var(--FundoContato);
+
 }
 
 @media (max-width: 550px) {
@@ -483,8 +503,8 @@ a{
         justify-content: space-evenly;
         justify-self: center;
         position: fixed;
-        background-color: #FFFEB5;
-        z-index: 99;
+        background-color: var(--BackBody);
+        z-index: 98;
 
         .btn-arrarst{
             display: none;
@@ -500,8 +520,8 @@ a{
         width: 90px;
         height: 90px;
         border-radius: 50%;
-        color: #DEDE94;
-        border: solid 4px #C9C968;
+        color: var(--SobreMim);
+        border: solid 4px var(--Border2Color);
         position: absolute;
         top: 9%;
         left: 6% !important;
@@ -805,7 +825,7 @@ a{
         justify-self: center;
         position: fixed;
         background-color: var(--BackBody);
-        z-index: 99;
+        z-index: 98;
     }
     
     #header::after{
@@ -817,7 +837,7 @@ a{
         position: absolute;
         bottom: 0%;
         border-radius: 50px;
-        z-index: 99;
+        z-index: 98;
     }
 
 }

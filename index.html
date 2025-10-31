@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Marcone Alves </title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsivo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
@@ -157,21 +156,21 @@
             CONTATO
         </div>
 
-        <form id="contato-fundo" action="https://formsubmit.co/filhomarconealves@gmail.com">
+        <form id="contato-fundo" action="https://formsubmit.co/filhomarconealves@gmail.com" method="POST">
             <div id="nome">
-                <input type="text" id="txt-nome" placeholder="Nome">
+                <input type="text" id="txt-nome" placeholder="Nome" name="Nome">
             </div>
 
             <div id="email">
-                <input type="text" id="txt-email" placeholder="email">
+                <input type="text" id="txt-email" placeholder="email" name="Email">
             </div>
 
             <div id="mensagem">
-                <textarea id="txt-mensagem" placeholder="Digite uma mensagem..."></textarea>
+                <textarea id="txt-mensagem" placeholder="Digite uma mensagem..." required name="Mensagem"></textarea>
             </div>
             
             <div id="botao">
-                <input type="submit" value="Enviar" id="botao-enviar">
+                <input type="submit" value="Enviar" id="botao-enviar" onclick="enviar()">
             </div>
 
         </form>
@@ -192,6 +191,15 @@
 
     <div id="nada">
 
+    </div>
+
+
+    <div id="modal-desc">
+        <div id="modal-back">
+            <div id="modal">
+
+         </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
