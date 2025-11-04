@@ -4,11 +4,37 @@
     transition: all 0.5s !important;
 }
 
+#txt-email::placeholder{
+    color: var(--TxtPadrao) ;
+}
+
+#txt-mensagem::placeholder{
+    color: var(--TxtPadrao) ;
+}
+
+#txt-nome::placeholder{
+    color: var(--TxtPadrao) ;
+}
+
+.barra-barra{
+    color: var(--TxtPadrao);
+}
+
+.txt-modal{
+    color: var(--TxtPadrao);
+    font-size: 2.5rem;
+    position: absolute;
+    text-align: center;
+    width: 99%;
+    margin-top: 5%;
+}
+
 :root{
     --BackBody: #FFFEB5;
     --TxtPadrao: black;
     --ColorLink: #3185B9;
     --HeaderBack: #B4B478;
+    --ContatoBack: #B4B478;
     --PerfilBack: #DADA95;
     --BorderColor: #C8C878;
     --TituloCor: #979741;
@@ -16,24 +42,26 @@
     --SobreMim: #DEDE94;
     --Habilidades: #D9D98A;
     --FundoContato: rgba(180, 180, 120, 57%);
+    --FundoModal: rgba(0, 0, 0, 57%);
     --BotaoEnviar: #91915c;
     --Border2Color: #C9C968;
 }
 
 .escuro{
-    --BackBody: #898530;
-    --TxtPadrao: #ffffff;
+    --BackBody: #1A1A12;
+    --TxtPadrao: #D8D89F;
     --ColorLink: #3185B9;
-    --HeaderBack: #b3b362;
-    --PerfilBack: #bfbf69;
-    --BorderColor: #C8C878;
-    --TituloCor: #979741;
-    --Titulo2Cor: #636340;
-    --SobreMim: #DEDE94;
-    --Habilidades: #D9D98A;
-    --FundoContato: rgba(180, 180, 120, 57%);
-    --BotaoEnviar: #B4B478;
-    --Border2Color: #C9C968;
+    --HeaderBack: #3C3C2E;
+    --ContatoBack: #3C3C2E;
+    --PerfilBack: #2A2A1F;
+    --BorderColor: #3C3C2E;
+    --TituloCor: #D8D89F;
+    --Titulo2Cor: #D8D89F;
+    --SobreMim: #2A2A1F;
+    --Habilidades: #3E3E2D;
+    --FundoContato: rgba(42, 42, 31, 57%);
+    --BotaoEnviar: #3C3C2E;
+    --Border2Color: #3C3C2E;
 
     #claro-escuro{
         background-image: url(escuro.svg) !important;
@@ -104,6 +132,7 @@ a{
     bottom: 0%;
     border-radius: 50px;
     z-index: 98;
+    left: 4.2%;
 }
 
 #info-perfil{
@@ -184,6 +213,7 @@ a{
     font-weight: bold;
     position: relative;
     margin-bottom: 5%;
+    color: var(--TxtPadrao);
 }
 
 #habilidades-titulo::after{
@@ -217,6 +247,7 @@ a{
 .hab-txt{
     font-size: 2rem;
     font-weight: bold;
+    color: var(--TxtPadrao);
 }
 
 #div-grid{
@@ -238,6 +269,7 @@ a{
     font-size: 2.6rem;
     font-weight: bold;
     position: relative;
+    color: var(--TxtPadrao);
 }
 
 #projetos-titulo::after{
@@ -283,6 +315,7 @@ a{
     font-weight: bold;
     margin-left: 16.8%;
     position: relative;
+    color: var(--TxtPadrao);
 }
 
 #contato-titulo::after{
@@ -318,7 +351,6 @@ a{
 #txt-nome{
     width: 480px;
     height: 71px;
-    background-color: var(--HeaderBack);
     border-radius: 20px;
     border: none;
     margin: 10% 0% 0% 10%;
@@ -326,6 +358,7 @@ a{
     font-weight: bold;
     color: var(--TxtPadrao);
     padding-left: 2%;
+    background-color: var(--ContatoBack);
 }
 
 #txt-nome:focus{
@@ -335,7 +368,7 @@ a{
 #txt-email{
     width: 480px;
     height: 71px;
-    background-color: var(--HeaderBack);
+    background-color: var(--ContatoBack);
     border-radius: 20px;
     border: none;
     margin: 10% 0% 0% 30%;
@@ -352,7 +385,7 @@ a{
 #txt-mensagem{
     width: 1065px;
     height: 259px;
-    background-color: var(--HeaderBack);
+    background-color: var(--ContatoBack);
     border-radius: 20px;
     border: none;
     margin: 10% 0% 0% 4%;
@@ -428,6 +461,7 @@ a{
 #tel-num{
     font-size: 3rem;
     font-weight: bold;
+    color: var(--TxtPadrao);
 }
 
 #nada{
@@ -468,25 +502,43 @@ a{
     background-position: 50% 50%;
 }
 
-#modal-desc{
-    position: relative;
+.modal-back{
+    border-radius: 50px;
+    border: 0px;
+    margin-left: 20%;
+    margin-top: 13%;
 }
 
-#modal-back{
-    width: 100%;
-    height: 300vh;
-    background-color: rgba(0, 0, 0, 50%);
+::backdrop{
+    background-color: var(--FundoModal)
+}
+
+.modal{
+    width: 60vw;
+    height: 50vh;
+    border-radius: 50px;
+    background-color: var(--BackBody);
+    text-align: center;
+    padding-top: 5%;
+    border: var(--BorderColor) solid 3px;
+}
+
+.modal-html{
+    width: 130px;
+}
+
+.sair-modal{
+    width: 5vw;
+    height: 10vh;
+    background-color: white;
+    background-image: url(X.png);
+    background-size: 70%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50px;
     position: absolute;
-    bottom: 0%;
-    z-index: 99;
-    display: none;
-}
-
-#modal{
-    width: 60%;
-    height: 50%;
-    background-color: var(--FundoContato);
-
+    right: 0%;
+    top: 0%;
 }
 
 @media (max-width: 550px) {
@@ -514,25 +566,6 @@ a{
             display: none;
         }
         
-    }
-
-    #claro-escuro{
-        width: 90px;
-        height: 90px;
-        border-radius: 50%;
-        color: var(--SobreMim);
-        border: solid 4px var(--Border2Color);
-        position: absolute;
-        top: 9%;
-        left: 6% !important;
-        color: black;
-        text-align: center;
-        padding-top: 2.5%;
-        font-size: 4rem;
-        font-weight: bold;
-        background-image: url(claro.svg);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
     }
 
     #foto-perfil{
@@ -575,7 +608,7 @@ a{
     }
 
     #sobre-mim{
-        width: 500px;
+        width: 380px;
         height: 350px;
         background-color: var(--SobreMim);
         border-radius: 50px;
@@ -784,23 +817,23 @@ a{
     }
 
     #botao-enviar{
-        width: 350px;
+        width: 320px;
         height: 70%;
         background-color: var(--HeaderBack);
         border-radius: 20px;
         border: none;
+        margin-left: 9%;
         transition: all 0.3s;
-        margin-left: 20%;
         font-size: 2rem;
     }
 
     #tel-img{
-        height: 70px;
-        width: 70px;
+        height: 50px;
+        width: 50px;
     }
 
     #tel-num{
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-weight: bold;
         width: 100%;
     }
@@ -838,6 +871,92 @@ a{
         bottom: 0%;
         border-radius: 50px;
         z-index: 98;
+    }
+
+    .div-hab{
+        width: 150px;
+        height: 101px;
+        background-color: var(--Habilidades);
+        border-radius: 25px;
+        text-align: center;
+        padding-top: 0.5%;
+        margin: 4% 0% 0% 1.5%;
+        display: inline-block;
+    }
+
+    .modal{
+        width: 60vw;
+        height: 30vh;
+        border-radius: 50px;
+        background-color: var(--BackBody);
+        text-align: center;
+        padding-top: 5%;
+    }
+
+    .modal-back{
+        border-radius: 50px;
+        border: black solid 3px;
+        margin-left: 20%;
+        margin-top: 60%;
+    }
+
+    .modal-html{
+        width: 70px;
+    }
+
+    .sair-modal{
+        width: 12vw;
+        height: 6vh;
+        background-color: white;
+        background-image: url(X.png);
+        background-size: 70%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 50px;
+        position: absolute;
+        right: 4%;
+        top: 4%;
+    }
+
+    .txt-modal{
+        color: var(--TxtPadrao);
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+        width: 99%;
+        margin-top: 10%;
+    }
+
+    .txt-modal-html{
+        color: var(--TxtPadrao);
+        font-size: 1.5rem;
+        position: absolute;
+        text-align: center;
+        width: 99%;
+        margin-top: 50%;
+    }
+
+    #claro-escuro{
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        color: var(--SobreMim);
+        border: solid 4px var(--Border2Color);
+        position: absolute;
+        top: 8%;
+        left: 5%;
+        color: var(--TxtPadrao);
+        text-align: center;
+        padding-top: 2.5%;
+        font-size: 4rem;
+        font-weight: bold;
+        background-image: url(claro.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+
+    #nada{
+        height: 0px;
     }
 
 }

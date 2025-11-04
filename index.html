@@ -85,32 +85,32 @@
 
         <div  id="div-grid">
 
-        <div class="div-hab">
+        <div class="div-hab" onclick="modalHtml()">
             <img src="HTML.png" class="hab-img" id="html-js">
             <p class="hab-txt">HTML</p>
         </div>
 
-        <div class="div-hab esq-hab">
+        <div class="div-hab esq-hab" onclick="modalVm()"> 
             <img src="VM.png" class="hab-img">
             <p class="hab-txt">VM</p>
         </div>
 
-        <div class="div-hab">
+        <div class="div-hab" onclick="modalCss()">
             <img src="CSS.png" class="hab-img">
             <p class="hab-txt">CSS</p>
         </div>
         
-        <div class="div-hab esq-hab">
+        <div class="div-hab esq-hab" onclick="modalBd()">
             <img src="BD.png" class="hab-img">
             <p class="hab-txt">BD</p>
         </div>
 
-        <div class="div-hab">
+        <div class="div-hab" onclick="modalCshar()">
             <img src="Cshar.png" class="hab-img">
             <p class="hab-txt">C#</p>
         </div>
 
-        <div class="div-hab esq-hab">
+        <div class="div-hab esq-hab" onclick="modalIng()">
             <img src="Ingles.png" class="hab-img">
             <p class="hab-txt">Ingles</p>
         </div>
@@ -156,7 +156,7 @@
             CONTATO
         </div>
 
-        <form id="contato-fundo" action="https://formsubmit.co/filhomarconealves@gmail.com" method="POST">
+        <form id="contato-fundo" action="#contato-fundo">
             <div id="nome">
                 <input type="text" id="txt-nome" placeholder="Nome" name="Nome">
             </div>
@@ -170,7 +170,7 @@
             </div>
             
             <div id="botao">
-                <input type="submit" value="Enviar" id="botao-enviar" onclick="enviar()">
+                <input type="submit" value="Enviar" id="botao-enviar">
             </div>
 
         </form>
@@ -194,13 +194,77 @@
     </div>
 
 
-    <div id="modal-desc">
-        <div id="modal-back">
-            <div id="modal">
+    <dialog class="modal-back">
+        <p class="txt-modal-html">Linguagem de marcação padrão usada para criar e estruturar páginas web</p>
+        <div class="modal">
+            <img src="HTML.png" class="modal-html"> <br><br>
 
-         </div>
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+
         </div>
-    </div>
+    </dialog>
+
+    <dialog class="modal-back">
+        <div class="modal">
+            <img src="VM.png" class="modal-html"> <br><br>
+            <p class="txt-modal">Criação de maquinas virtuais</p>
+
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+            
+        </div>
+    </dialog>
+
+    <dialog class="modal-back">
+        <div class="modal">
+            <img src="CSS.png" class="modal-html"> <br><br>
+            <p class="txt-modal">É uma linguagem de estilo que separa o conteúdo de um site (HTML) de sua apresentação visual</p>
+
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+
+        </div>
+    </dialog>
+
+    <dialog class="modal-back">
+        <div class="modal">
+            <img src="BD.png" class="modal-html"> <br><br>
+            <p class="txt-modal">É uma coleção organizada e estruturada de informações, armazenadas eletronicamente para permitir acesso, manipulação e recuperação eficientes de dados</p>
+
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+
+        </div>
+    </dialog>
+
+    <dialog class="modal-back">
+        <div class="modal">
+            <img src="Cshar.png" class="modal-html"> <br><br>
+            <p class="txt-modal">Linguagem de programação moderna, orientada a objetos, desenvolvida pela Microsoft como parte da plataforma .NET</p>
+
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+
+        </div>
+    </dialog>
+
+    <dialog class="modal-back">
+        <div class="modal">
+            <img src="Ingles.png" class="modal-html"> <br><br>
+            <p class="txt-modal">Lingua inglesa</p>
+
+            <div class="sair-modal" onclick="sairModal()">
+                
+            </div>
+
+        </div>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
